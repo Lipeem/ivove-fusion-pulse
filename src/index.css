@@ -80,12 +80,13 @@
   background: #ff3399;
 }
 
-/* Biomorphic background shapes */
+/* Enhanced biomorphic background shapes with reduced visual impact */
 .bio-shape {
   position: absolute;
-  background: linear-gradient(45deg, rgba(255, 0, 127, 0.1), rgba(0, 51, 255, 0.1));
-  filter: blur(1px);
-  animation: morphing 8s ease-in-out infinite;
+  background: linear-gradient(45deg, rgba(255, 0, 127, 0.08), rgba(0, 51, 255, 0.08));
+  filter: blur(2px);
+  animation: morphing 12s ease-in-out infinite;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
 }
 
 .bio-shape-1 {
@@ -101,7 +102,7 @@
   height: 200px;
   top: 60%;
   right: 10%;
-  animation-delay: 2s;
+  animation-delay: 4s;
 }
 
 .bio-shape-3 {
@@ -109,5 +110,50 @@
   height: 150px;
   top: 30%;
   right: 30%;
-  animation-delay: 4s;
+  animation-delay: 8s;
+}
+
+/* Enhanced animations */
+@keyframes morphing {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    transform: rotate(90deg) scale(1.05);
+  }
+  50% {
+    border-radius: 70% 30% 40% 60%/40% 70% 60% 30%;
+    transform: rotate(180deg) scale(0.95);
+  }
+  75% {
+    border-radius: 40% 70% 60% 30%/70% 40% 30% 60%;
+    transform: rotate(270deg) scale(1.02);
+  }
+}
+
+/* Responsive adjustments for better mobile experience */
+@media (max-width: 768px) {
+  .bio-shape-1 {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .bio-shape-2 {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .bio-shape-3 {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Improved text contrast and readability */
+@media (max-width: 640px) {
+  .bio-shape {
+    opacity: 0.6;
+  }
 }
