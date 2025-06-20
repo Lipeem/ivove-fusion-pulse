@@ -125,64 +125,75 @@ const Agenda = () => {
       <BiomorphicShapes />
       <Navigation />
       
-      <div className="container mx-auto px-6 pt-24 pb-20">
-        <div className="text-center mb-12">
-          <h1 className="text-5xl md:text-6xl font-space font-bold mb-6 bg-gradient-to-r from-ivove-fuchsia to-ivove-blue bg-clip-text text-transparent">
-            Event Agenda
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Two days of immersive sessions exploring the intersection of AI, 3D printing, and human innovation
-          </p>
+      <div className="container mx-auto px-6 pt-24 pb-20 relative z-10">
+        {/* Enhanced header section with better contrast */}
+        <div className="text-center mb-12 relative">
+          {/* Additional background for better text visibility */}
+          <div className="absolute inset-0 bg-ivove-dark/40 backdrop-blur-sm rounded-2xl -m-8"></div>
+          <div className="relative z-10 py-8">
+            <h1 className="text-5xl md:text-6xl font-space font-bold mb-6 bg-gradient-to-r from-ivove-fuchsia to-ivove-blue bg-clip-text text-transparent drop-shadow-lg">
+              Event Agenda
+            </h1>
+            <p className="text-xl text-white max-w-3xl mx-auto font-medium drop-shadow-md">
+              Two days of immersive sessions exploring the intersection of AI, 3D printing, and human innovation
+            </p>
+          </div>
         </div>
 
-        {/* Filters */}
-        <div className="mb-12 flex flex-wrap gap-4 justify-center">
-          <div className="flex flex-wrap gap-2">
-            <span className="text-sm text-gray-400 self-center mr-2">Filter by Pillar:</span>
-            {pillars.map(pillar => (
-              <button
-                key={pillar}
-                onClick={() => setFilterPillar(pillar)}
-                className={`px-3 py-1 rounded-full text-sm transition-all ${
-                  filterPillar === pillar 
-                    ? 'bg-ivove-fuchsia text-white' 
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                }`}
-              >
-                {pillar}
-              </button>
-            ))}
+        {/* Enhanced Filters with better visibility */}
+        <div className="mb-12 flex flex-wrap gap-4 justify-center relative z-10">
+          <div className="bg-ivove-dark/60 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+            <div className="flex flex-wrap gap-2">
+              <span className="text-sm text-white/90 self-center mr-2 font-medium">Filter by Pillar:</span>
+              {pillars.map(pillar => (
+                <button
+                  key={pillar}
+                  onClick={() => setFilterPillar(pillar)}
+                  className={`px-3 py-1 rounded-full text-sm transition-all font-medium ${
+                    filterPillar === pillar 
+                      ? 'bg-ivove-fuchsia text-white shadow-lg' 
+                      : 'bg-white/15 text-white hover:bg-white/25'
+                  }`}
+                >
+                  {pillar}
+                </button>
+              ))}
+            </div>
           </div>
           
-          <div className="flex flex-wrap gap-2">
-            <span className="text-sm text-gray-400 self-center mr-2">Filter by Day:</span>
-            {days.map(day => (
-              <button
-                key={day}
-                onClick={() => setFilterDay(day)}
-                className={`px-3 py-1 rounded-full text-sm transition-all ${
-                  filterDay === day 
-                    ? 'bg-ivove-blue text-white' 
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                }`}
-              >
-                {day}
-              </button>
-            ))}
+          <div className="bg-ivove-dark/60 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+            <div className="flex flex-wrap gap-2">
+              <span className="text-sm text-white/90 self-center mr-2 font-medium">Filter by Day:</span>
+              {days.map(day => (
+                <button
+                  key={day}
+                  onClick={() => setFilterDay(day)}
+                  className={`px-3 py-1 rounded-full text-sm transition-all font-medium ${
+                    filterDay === day 
+                      ? 'bg-ivove-blue text-white shadow-lg' 
+                      : 'bg-white/15 text-white hover:bg-white/25'
+                  }`}
+                >
+                  {day}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Download Button */}
-        <div className="text-center mb-12">
-          <Button asChild className="bg-gradient-to-r from-ivove-fuchsia to-ivove-blue hover:from-ivove-fuchsia/80 hover:to-ivove-blue/80">
-            <a href="https://example.com/agenda.pdf" target="_blank" rel="noopener noreferrer">
-              Download Full Agenda (PDF)
-            </a>
-          </Button>
+        {/* Enhanced Download Button */}
+        <div className="text-center mb-12 relative z-10">
+          <div className="bg-ivove-dark/40 backdrop-blur-sm rounded-xl p-6 border border-white/10 inline-block">
+            <Button asChild className="bg-gradient-to-r from-ivove-fuchsia to-ivove-blue hover:from-ivove-fuchsia/80 hover:to-ivove-blue/80 shadow-xl">
+              <a href="https://example.com/agenda.pdf" target="_blank" rel="noopener noreferrer">
+                Download Full Agenda (PDF)
+              </a>
+            </Button>
+          </div>
         </div>
 
         {/* Timeline */}
-        <div className="max-w-4xl mx-auto relative">
+        <div className="max-w-4xl mx-auto relative z-10">
           <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-ivove-fuchsia to-ivove-blue"></div>
           
           {filteredSessions.map((session, index) => (

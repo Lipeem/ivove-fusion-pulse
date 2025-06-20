@@ -1,25 +1,29 @@
 
+
 const BiomorphicShapes = () => {
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
       {/* Neural Network Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50 md:opacity-60"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 md:opacity-50"
         style={{
           backgroundImage: "url('/lovable-uploads/0dbee74c-e196-44ba-bb42-49d4136303d4.png')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          filter: 'blur(0.3px) brightness(0.9) contrast(1.3)',
+          filter: 'blur(0.5px) brightness(0.7) contrast(1.1)',
         }}
       />
       
-      {/* Gradient overlay to ensure text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-ivove-dark/50 via-ivove-dark/30 to-ivove-dark/70" />
+      {/* Enhanced gradient overlay for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-ivove-dark/80 via-ivove-dark/60 to-ivove-dark/70" />
       
-      {/* Original biomorphic shapes with enhanced visibility */}
-      <div className="bio-shape bio-shape-1 opacity-30" />
-      <div className="bio-shape bio-shape-2 opacity-25" />
-      <div className="bio-shape bio-shape-3 opacity-35" />
+      {/* Additional overlay for header area */}
+      <div className="absolute top-0 left-0 right-0 h-96 bg-gradient-to-b from-ivove-dark/90 to-transparent" />
+      
+      {/* Original biomorphic shapes with reduced opacity */}
+      <div className="bio-shape bio-shape-1 opacity-20" />
+      <div className="bio-shape bio-shape-2 opacity-15" />
+      <div className="bio-shape bio-shape-3 opacity-25" />
       
       {/* Enhanced floating elements with more variety and intensity */}
       <div className="absolute top-20 left-1/4 w-4 h-4 bg-ivove-fuchsia rounded-full animate-float opacity-60" />
@@ -49,3 +53,4 @@ const BiomorphicShapes = () => {
 };
 
 export default BiomorphicShapes;
+
