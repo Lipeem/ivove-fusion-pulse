@@ -9,35 +9,35 @@ const pillars = [
   {
     title: "Purposeful Innovation",
     description: "Innovation that creates meaningful impact and drives positive change in society.",
-    icon: "🎯",
+    icon: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=100&h=100&fit=crop&crop=center",
     color: "ivove-fuchsia",
     content: "Discover how technology can be directed towards solving real-world problems and creating value that transcends profit. Learn from leaders who have built purpose-driven innovations."
   },
   {
     title: "Courage to Transform",
     description: "Embracing bold changes and fearless adaptation in the face of uncertainty.",
-    icon: "⚡",
+    icon: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=100&h=100&fit=crop&crop=center",
     color: "ivove-blue",
     content: "Transformation requires courage to leave comfort zones and embrace uncertainty. Explore stories of individuals and organizations that have reinvented themselves through bold decisions."
   },
   {
     title: "Innovation and Career",
     description: "Reshaping professional paths through innovative thinking and creative approaches.",
-    icon: "🚀",
+    icon: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=100&h=100&fit=crop&crop=center",
     color: "ivove-fuchsia",
     content: "The future of work demands new skills and mindsets. Learn how to build a career that thrives on innovation and adapts to the changing landscape of technology and AI."
   },
   {
     title: "Creative Resilience",
     description: "Building strength through creativity and finding opportunities in challenges.",
-    icon: "🌟",
+    icon: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=100&h=100&fit=crop&crop=center",
     color: "ivove-blue",
     content: "Resilience isn't just about bouncing back—it's about bouncing forward with creativity. Discover how creative thinking can turn obstacles into opportunities for growth."
   },
   {
     title: "Balance that Liberates",
     description: "Achieving harmony between innovation, well-being, and personal fulfillment.",
-    icon: "⚖️",
+    icon: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=100&h=100&fit=crop&crop=center",
     color: "ivove-fuchsia",
     content: "True innovation comes from balanced minds and healthy environments. Explore how sustainable practices and well-being contribute to more effective and meaningful innovation."
   }
@@ -54,13 +54,13 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-6 pt-20">
         <div className="container mx-auto text-center z-10">
-          <h1 className="text-6xl md:text-8xl font-space font-bold mb-8 bg-gradient-to-r from-white via-ivove-fuchsia to-ivove-blue bg-clip-text text-transparent animate-fade-in">
+          <h1 className="text-4xl md:text-6xl font-space font-bold mb-6 bg-gradient-to-r from-white via-ivove-fuchsia to-ivove-blue bg-clip-text text-transparent animate-fade-in">
             Innovation moves us.<br />
             Overcoming transforms us.
           </h1>
           
           <div className="max-w-4xl mx-auto mb-16">
-            <p className="text-xl md:text-2xl text-gray-300 leading-relaxed font-inter">
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-inter">
               Ivove is born as a space to collectively expand the meaning of innovation — not just through technology, 
               but in how we face challenges, shape careers, and pursue well-being.
             </p>
@@ -116,7 +116,9 @@ const Index = () => {
         <DialogContent className="bg-ivove-dark border border-white/20 text-white max-w-2xl">
           <DialogHeader>
             <DialogTitle className="text-2xl font-space font-bold text-ivove-fuchsia flex items-center gap-3">
-              <span className="text-3xl">{selectedPillar?.icon}</span>
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-ivove-fuchsia to-ivove-blue flex items-center justify-center">
+                <img src={selectedPillar?.icon} alt="" className="w-6 h-6 rounded object-cover" />
+              </div>
               {selectedPillar?.title}
             </DialogTitle>
           </DialogHeader>

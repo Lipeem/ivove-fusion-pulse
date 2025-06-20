@@ -21,8 +21,14 @@ const PillarCard = ({ title, description, icon, color, onClick }: PillarCardProp
       onClick={onClick}
     >
       <CardContent className="p-8 text-center">
-        <div className={`text-4xl mb-4 transition-transform duration-300 ${isHovered ? 'scale-110' : ''}`}>
-          {icon}
+        <div className={`mb-6 transition-transform duration-300 ${isHovered ? 'scale-110' : ''} flex justify-center`}>
+          <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-ivove-fuchsia/20 to-ivove-blue/20 flex items-center justify-center overflow-hidden">
+            <img 
+              src={icon} 
+              alt={title}
+              className="w-12 h-12 object-cover rounded-lg filter brightness-110 contrast-110"
+            />
+          </div>
         </div>
         <h3 className={`text-xl font-space font-semibold mb-3 text-white group-hover:text-${color} transition-colors`}>
           {title}
