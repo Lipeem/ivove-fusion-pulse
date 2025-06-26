@@ -1,16 +1,17 @@
 
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import { LucideIcon } from 'lucide-react';
 
 interface PillarCardProps {
   title: string;
   description: string;
-  icon: string;
+  icon: LucideIcon;
   color: string;
   onClick: () => void;
 }
 
-const PillarCard = ({ title, description, icon, color, onClick }: PillarCardProps) => {
+const PillarCard = ({ title, description, icon: Icon, color, onClick }: PillarCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -23,11 +24,7 @@ const PillarCard = ({ title, description, icon, color, onClick }: PillarCardProp
       <CardContent className="p-8 text-center">
         <div className={`mb-6 transition-transform duration-300 ${isHovered ? 'scale-110' : ''} flex justify-center`}>
           <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-ivove-fuchsia/20 to-ivove-blue/20 flex items-center justify-center overflow-hidden">
-            <img 
-              src={icon} 
-              alt={title}
-              className="w-12 h-12 object-cover rounded-lg filter brightness-110 contrast-110"
-            />
+            <Icon className="w-8 h-8 text-white" />
           </div>
         </div>
         <h3 className={`text-xl font-space font-semibold mb-3 text-white group-hover:text-${color} transition-colors`}>

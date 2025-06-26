@@ -4,42 +4,43 @@ import Navigation from '@/components/Navigation';
 import BiomorphicShapes from '@/components/BiomorphicShapes';
 import PillarCard from '@/components/PillarCard';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Earth, Sun, Rocket, Moon, Satellite } from 'lucide-react';
 
 const pillars = [
   {
     title: "Purposeful Innovation",
-    description: "Innovation that creates meaningful impact and drives positive change in society.",
-    icon: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=100&h=100&fit=crop&crop=center",
+    description: "Innovation that creates meaningful impact and drives positive change in our world.",
+    icon: Earth,
     color: "ivove-fuchsia",
-    content: "Discover how technology can be directed towards solving real-world problems and creating value that transcends profit. Learn from leaders who have built purpose-driven innovations."
+    content: "Discover how technology can be directed towards solving real-world problems and creating value that transcends profit. Like caring for our home planet, learn from leaders who have built purpose-driven innovations that benefit humanity."
   },
   {
     title: "Courage to Transform",
-    description: "Embracing bold changes and fearless adaptation in the face of uncertainty.",
-    icon: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=100&h=100&fit=crop&crop=center",
+    description: "Embracing bold changes with the energy needed to illuminate new possibilities.",
+    icon: Sun,
     color: "ivove-blue",
-    content: "Transformation requires courage to leave comfort zones and embrace uncertainty. Explore stories of individuals and organizations that have reinvented themselves through bold decisions."
+    content: "Transformation requires the courage to harness immense energy and leave comfort zones. Like the Sun powers our solar system, explore stories of individuals and organizations that have reinvented themselves through bold, radiant decisions."
   },
   {
     title: "Innovation and Career",
-    description: "Reshaping professional paths through innovative thinking and creative approaches.",
-    icon: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=100&h=100&fit=crop&crop=center",
+    description: "Launching professional paths through innovative thinking and exploration of new frontiers.",
+    icon: Rocket,
     color: "ivove-fuchsia",
-    content: "The future of work demands new skills and mindsets. Learn how to build a career that thrives on innovation and adapts to the changing landscape of technology and AI."
+    content: "The future of work demands new skills and mindsets for exploring uncharted territories. Learn how to build a career that launches beyond conventional boundaries and adapts to the expanding landscape of technology and AI."
   },
   {
     title: "Creative Resilience",
-    description: "Building strength through creativity and finding opportunities in challenges.",
-    icon: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=100&h=100&fit=crop&crop=center",
+    description: "Building strength through creativity and finding light in the darkness of challenges.",
+    icon: Moon,
     color: "ivove-blue",
-    content: "Resilience isn't just about bouncing back—it's about bouncing forward with creativity. Discover how creative thinking can turn obstacles into opportunities for growth."
+    content: "Resilience isn't just about bouncing back—it's about finding new perspectives through cycles of change. Like the Moon guides us through darkness, discover how creative thinking can turn obstacles into opportunities for growth."
   },
   {
     title: "Balance that Liberates",
-    description: "Achieving harmony between innovation, well-being, and personal fulfillment.",
-    icon: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=100&h=100&fit=crop&crop=center",
+    description: "Achieving orbital harmony between innovation, well-being, and personal fulfillment.",
+    icon: Satellite,
     color: "ivove-fuchsia",
-    content: "True innovation comes from balanced minds and healthy environments. Explore how sustainable practices and well-being contribute to more effective and meaningful innovation."
+    content: "True innovation comes from balanced systems and sustainable orbits. Like satellites maintain perfect equilibrium in space, explore how sustainable practices and well-being contribute to more effective and meaningful innovation."
   }
 ];
 
@@ -55,14 +56,14 @@ const Index = () => {
       <section className="relative min-h-screen flex items-center justify-center px-6 pt-20">
         <div className="container mx-auto text-center z-10">
           <h1 className="text-4xl md:text-6xl font-space font-bold mb-6 bg-gradient-to-r from-white via-ivove-fuchsia to-ivove-blue bg-clip-text text-transparent animate-fade-in">
-            Innovation moves us.<br />
-            Overcoming transforms us.
+            Innovation propels us forward.<br />
+            Overcoming launches us beyond.
           </h1>
           
           <div className="max-w-4xl mx-auto mb-16">
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-inter">
-              Ivove is born as a space to collectively expand the meaning of innovation — not just through technology, 
-              but in how we face challenges, shape careers, and pursue well-being.
+              Ivove emerges as a cosmic space to collectively expand the meaning of innovation — not just through technology, 
+              but in how we navigate challenges, chart new career paths, and orbit around well-being in our vast universe of possibilities.
             </p>
           </div>
 
@@ -76,10 +77,10 @@ const Index = () => {
       <section className="relative py-20 px-6">
         <div className="container mx-auto">
           <h2 className="text-4xl md:text-5xl font-space font-bold text-center mb-4 text-white">
-            Five Pillars of Innovation
+            Five Celestial Pillars of Innovation
           </h2>
           <p className="text-center text-gray-300 mb-16 text-lg">
-            Explore the foundational themes that drive meaningful change
+            Navigate the cosmic foundations that drive meaningful transformation
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -101,12 +102,12 @@ const Index = () => {
       <section className="relative py-20 px-6 bg-gradient-to-b from-transparent to-white/5">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-space font-bold mb-8 text-white">
-            Where AI Meets 3D Printing
+            Terraforming the Future: AI Meets 3D Printing
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Discover the revolutionary intersection of artificial intelligence and additive manufacturing. 
-            From generative design to smart fabrication, explore how these technologies are reshaping 
-            the future of creation and innovation.
+            Discover the revolutionary intersection where artificial intelligence and additive manufacturing 
+            converge to build new worlds. From generative design that mimics cosmic structures to smart fabrication 
+            systems, explore how these technologies are reshaping our ability to create and colonize the future of innovation.
           </p>
         </div>
       </section>
@@ -117,7 +118,7 @@ const Index = () => {
           <DialogHeader>
             <DialogTitle className="text-2xl font-space font-bold text-ivove-fuchsia flex items-center gap-3">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-ivove-fuchsia to-ivove-blue flex items-center justify-center">
-                <img src={selectedPillar?.icon} alt="" className="w-6 h-6 rounded object-cover" />
+                {selectedPillar?.icon && <selectedPillar.icon className="w-5 h-5 text-white" />}
               </div>
               {selectedPillar?.title}
             </DialogTitle>
