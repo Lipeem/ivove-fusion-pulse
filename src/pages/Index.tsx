@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import BiomorphicShapes from '@/components/BiomorphicShapes';
 import PillarCard from '@/components/PillarCard';
+import CountdownTimer from '@/components/CountdownTimer';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Earth, Sun, Rocket, Moon, Satellite } from 'lucide-react';
 
@@ -49,6 +50,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-ivove-dark text-white overflow-x-hidden">
+      <CountdownTimer />
       <BiomorphicShapes />
       <Navigation />
       
