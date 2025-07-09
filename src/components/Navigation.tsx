@@ -27,8 +27,15 @@ const Navigation = () => {
               <span className="text-white font-bold text-base sm:text-lg">I</span>
             </div>
             <Link to="/" className="text-lg sm:text-2xl font-space font-bold text-white hover:text-ivove-fuchsia transition-colors truncate">
-              Projeto Ivove
+              Innoverse
             </Link>
+          </div>
+          
+          {/* Center text */}
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2">
+            <span className="text-white font-space font-medium text-lg bg-gradient-to-r from-ivove-fuchsia to-ivove-blue bg-clip-text text-transparent">
+              Inove Initiative
+            </span>
           </div>
           
           <div className="flex items-center space-x-2 sm:space-x-6 flex-shrink-0">

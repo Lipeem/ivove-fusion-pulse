@@ -13,6 +13,7 @@ interface Session {
   time: string;
   location: string;
   speaker: string;
+  speakerImage?: string;
   description: string;
   pillar: string;
   pillarColor: string;
@@ -22,87 +23,81 @@ interface Session {
 const sessions: Session[] = [
   {
     id: '1',
-    title: 'Opening Keynote: The Future of AI-Driven Innovation',
-    shortTitle: 'Opening Keynote',
-    time: '09:00 - 10:00',
-    location: 'Main Auditorium',
-    speaker: 'Dr. Sarah Chen',
-    description: 'Explore the transformative potential of artificial intelligence in driving purposeful innovation across industries. Learn how AI can be harnessed to create meaningful impact and solve complex global challenges.',
+    title: 'Opening + (Title to be defined)',
+    shortTitle: 'Opening Event',
+    time: '2:00 PM',
+    location: 'Online',
+    speaker: 'Marcelo Figueiral',
+    speakerImage: 'https://via.placeholder.com/40x40/666/fff?text=MF',
+    description: 'Join us for the grand opening of Innoverse and discover the revolutionary potential of innovation in our universe. This session will set the tone for our journey through the cosmos of creativity and transformation.',
     pillar: 'Purposeful Innovation',
     pillarColor: 'bg-ivove-fuchsia',
-    day: 'Day 1'
+    day: 'Day 1 - August 7'
   },
   {
     id: '2',
-    title: 'Generative Design: When AI Meets 3D Printing',
-    shortTitle: 'Generative Design Workshop',
-    time: '10:30 - 12:00',
-    location: 'Innovation Lab A',
-    speaker: 'Prof. Marcus Rodriguez',
-    description: 'Discover how generative algorithms are revolutionizing product design and manufacturing. This hands-on session explores the intersection of AI creativity and 3D printing technology.',
+    title: '(Title to be defined)',
+    shortTitle: 'Morning Session',
+    time: '10:30 AM',
+    location: 'Online',
+    speaker: 'Professor Henrique',
+    speakerImage: 'https://via.placeholder.com/40x40/666/fff?text=PH',
+    description: 'Explore innovative approaches and methodologies that are reshaping our understanding of technology and human potential. Details and title to be confirmed.',
     pillar: 'Courage to Transform',
     pillarColor: 'bg-ivove-blue',
-    day: 'Day 1'
+    day: 'Day 2 - August 14 (Morning)'
   },
   {
     id: '3',
-    title: 'Building an AI-Ready Career in the Creative Industries',
-    shortTitle: 'AI-Ready Careers',
-    time: '14:00 - 15:30',
-    location: 'Workshop Room B',
-    speaker: 'Emma Thompson',
-    description: 'Navigate the changing landscape of creative careers in the age of AI. Learn essential skills and strategies to thrive in industries being transformed by artificial intelligence.',
-    pillar: 'Innovation and Career',
-    pillarColor: 'bg-ivove-fuchsia',
-    day: 'Day 1'
+    title: 'Resilience in Difficult Times',
+    shortTitle: 'Resilience Workshop',
+    time: '2:00 PM',
+    location: 'Online',
+    speaker: 'Ericsson Souza',
+    speakerImage: 'https://via.placeholder.com/40x40/666/fff?text=ES',
+    description: 'Discover strategies for building resilience and maintaining innovation momentum during challenging periods. Learn how to transform obstacles into opportunities for growth and breakthrough innovation.',
+    pillar: 'Creative Resilience',
+    pillarColor: 'bg-ivove-blue',
+    day: 'Day 2 - August 14 (Afternoon)'
   },
   {
     id: '4',
-    title: 'Resilient Innovation: Learning from Failure in Tech',
-    shortTitle: 'Resilient Innovation',
-    time: '16:00 - 17:00',
-    location: 'Main Auditorium',
-    speaker: 'James Mitchell',
-    description: 'Embrace failure as a catalyst for innovation. This session explores how setbacks can become stepping stones to breakthrough innovations in technology and beyond.',
-    pillar: 'Creative Resilience',
-    pillarColor: 'bg-ivove-blue',
-    day: 'Day 1'
+    title: '3D Printing Workshop',
+    shortTitle: '3D Printing Workshop',
+    time: 'All Day',
+    location: 'In-Person: Rooms to be defined',
+    speaker: 'Speakers to be defined',
+    speakerImage: 'https://via.placeholder.com/40x40/666/fff?text=3D',
+    description: 'Hands-on workshop exploring the revolutionary world of 3D printing and additive manufacturing. Learn how these technologies are reshaping design, prototyping, and production across industries.',
+    pillar: 'Innovation and Career',
+    pillarColor: 'bg-ivove-fuchsia',
+    day: 'Day 3 - August 19'
   },
   {
     id: '5',
-    title: 'Sustainable 3D Printing: Innovation for the Planet',
-    shortTitle: 'Sustainable 3D Printing',
-    time: '09:30 - 11:00',
-    location: 'Green Tech Center',
-    speaker: 'Dr. Aisha Patel',
-    description: 'Explore how 3D printing technologies can contribute to sustainable development goals while maintaining innovation momentum. Balance environmental responsibility with technological advancement.',
+    title: 'From Emotional Intelligence to Artificial Intelligence',
+    shortTitle: 'EI to AI',
+    time: '10:30 AM',
+    location: 'Online',
+    speaker: 'Fabrício Pupo',
+    speakerImage: 'https://via.placeholder.com/40x40/666/fff?text=FP',
+    description: 'Explore the fascinating connection between human emotional intelligence and artificial intelligence. Understand how these two forms of intelligence can work together to create more meaningful and impactful innovations.',
     pillar: 'Balance that Liberates',
     pillarColor: 'bg-ivove-fuchsia',
-    day: 'Day 2'
+    day: 'Day 4 - August 21 (Morning)'
   },
   {
     id: '6',
-    title: 'Neural Networks and Creative Expression',
-    shortTitle: 'Neural Networks & Art',
-    time: '11:30 - 13:00',
-    location: 'Creative Studio',
-    speaker: 'Alex Rivera',
-    description: 'Discover how neural networks are becoming tools for artistic expression. Learn about AI-generated art, music, and design that pushes the boundaries of human creativity.',
+    title: 'Closing: Zezinho Talk + Gralha Award',
+    shortTitle: 'Closing Ceremony',
+    time: '2:00 PM onwards',
+    location: 'Church',
+    speaker: 'Zezinho + Award Ceremony',
+    speakerImage: 'https://via.placeholder.com/40x40/666/fff?text=Z+',
+    description: 'Join us for the grand finale of Innoverse featuring an inspiring talk by Zezinho and the presentation of the prestigious Gralha Award. Celebrate the innovations and breakthroughs discovered during our cosmic journey.',
     pillar: 'Purposeful Innovation',
     pillarColor: 'bg-ivove-fuchsia',
-    day: 'Day 2'
-  },
-  {
-    id: '7',
-    title: 'Closing Panel: The Future We\'re Building Together',
-    shortTitle: 'Closing Panel',
-    time: '15:00 - 16:30',
-    location: 'Main Auditorium',
-    speaker: 'Panel of Speakers',
-    description: 'Join all our speakers for a collaborative discussion about the future of innovation, technology, and human potential. Explore how we can build a better tomorrow together.',
-    pillar: 'Balance that Liberates',
-    pillarColor: 'bg-ivove-fuchsia',
-    day: 'Day 2'
+    day: 'Day 4 - August 21 (Afternoon)'
   }
 ];
 
@@ -112,7 +107,7 @@ const Agenda = () => {
   const [filterDay, setFilterDay] = useState<string>('All');
 
   const pillars = ['All', 'Purposeful Innovation', 'Courage to Transform', 'Innovation and Career', 'Creative Resilience', 'Balance that Liberates'];
-  const days = ['All', 'Day 1', 'Day 2'];
+  const days = ['All', 'Day 1 - August 7', 'Day 2 - August 14 (Morning)', 'Day 2 - August 14 (Afternoon)', 'Day 3 - August 19', 'Day 4 - August 21 (Morning)', 'Day 4 - August 21 (Afternoon)'];
 
   const filteredSessions = sessions.filter(session => {
     const pillarMatch = filterPillar === 'All' || session.pillar === filterPillar;
@@ -135,7 +130,7 @@ const Agenda = () => {
               Event Agenda
             </h1>
             <p className="text-xl text-white max-w-3xl mx-auto font-medium drop-shadow-md">
-              Two days of immersive sessions exploring the intersection of AI, 3D printing, and human innovation
+              Four days of immersive sessions exploring the intersection of AI, 3D printing, and human innovation
             </p>
           </div>
         </div>
@@ -164,7 +159,7 @@ const Agenda = () => {
           <div className="bg-ivove-dark/60 backdrop-blur-sm rounded-xl p-4 border border-white/10">
             <div className="flex flex-wrap gap-2">
               <span className="text-sm text-white/90 self-center mr-2 font-medium">Filter by Day:</span>
-              {days.map(day => (
+              {days.slice(0, 4).map(day => (
                 <button
                   key={day}
                   onClick={() => setFilterDay(day)}
@@ -174,7 +169,7 @@ const Agenda = () => {
                       : 'bg-white/15 text-white hover:bg-white/25'
                   }`}
                 >
-                  {day}
+                  {day.includes('Day') ? day.split(' - ')[0] : day}
                 </button>
               ))}
             </div>
@@ -216,9 +211,17 @@ const Agenda = () => {
                     </Badge>
                   </div>
                   
-                  <h3 className="text-xl font-space font-semibold mb-2 text-white hover:text-ivove-fuchsia transition-colors">
-                    {session.shortTitle}
-                  </h3>
+                  {/* Speaker image and title */}
+                  <div className="flex items-center gap-3 mb-3">
+                    <img 
+                      src={session.speakerImage} 
+                      alt={session.speaker}
+                      className="w-10 h-10 rounded-full border-2 border-ivove-fuchsia/50"
+                    />
+                    <h3 className="text-xl font-space font-semibold text-white hover:text-ivove-fuchsia transition-colors">
+                      {session.shortTitle}
+                    </h3>
+                  </div>
                   
                   <div className="space-y-1 text-sm text-gray-300">
                     <p><span className="text-ivove-fuchsia">⏰</span> {session.time}</p>

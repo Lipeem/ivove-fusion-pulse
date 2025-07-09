@@ -58,14 +58,12 @@ const Index = () => {
       <section className="relative min-h-screen flex items-center justify-center px-6 pt-20">
         <div className="container mx-auto text-center z-10">
           <h1 className="text-4xl md:text-6xl font-space font-bold mb-6 bg-gradient-to-r from-white via-ivove-fuchsia to-ivove-blue bg-clip-text text-transparent animate-fade-in">
-            Innovation propels us forward.<br />
-            Overcoming launches us beyond.
+            Welcome to Innoverse
           </h1>
           
           <div className="max-w-4xl mx-auto mb-16">
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-inter">
-              Ivove emerges as a cosmic space to collectively expand the meaning of innovation — not just through technology, 
-              but in how we navigate challenges, chart new career paths, and orbit around well-being in our vast universe of possibilities.
+            <p className="text-lg md:text-xl text-white leading-relaxed font-inter">
+              IN01 has been found, and it would like to invite you to this universe of Innovation
             </p>
           </div>
 
@@ -85,31 +83,47 @@ const Index = () => {
             Navigate the cosmic foundations that drive meaningful transformation
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pillars.map((pillar, index) => (
-              <PillarCard
-                key={index}
-                title={pillar.title}
-                description={pillar.description}
-                icon={pillar.icon}
-                color={pillar.color}
-                onClick={() => setSelectedPillar(pillar)}
-              />
-            ))}
+          {/* Updated grid layout for centered pillars: 3 on top, 2 on bottom */}
+          <div className="max-w-6xl mx-auto">
+            {/* First row - 3 pillars */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+              {pillars.slice(0, 3).map((pillar, index) => (
+                <PillarCard
+                  key={index}
+                  title={pillar.title}
+                  description={pillar.description}
+                  icon={pillar.icon}
+                  color={pillar.color}
+                  onClick={() => setSelectedPillar(pillar)}
+                />
+              ))}
+            </div>
+            
+            {/* Second row - 2 pillars centered */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {pillars.slice(3, 5).map((pillar, index) => (
+                <PillarCard
+                  key={index + 3}
+                  title={pillar.title}
+                  description={pillar.description}
+                  icon={pillar.icon}
+                  color={pillar.color}
+                  onClick={() => setSelectedPillar(pillar)}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* AI & 3D Printing Section */}
+      {/* AI & Innovation Section */}
       <section className="relative py-20 px-6 bg-gradient-to-b from-transparent to-white/5">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-space font-bold mb-8 text-white">
-            Terraforming the Future: AI Meets 3D Printing
+            Terraforming the Future: AI Meets the Innovation Universe
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Discover the revolutionary intersection where artificial intelligence and additive manufacturing 
-            converge to build new worlds. From generative design that mimics cosmic structures to smart fabrication 
-            systems, explore how these technologies are reshaping our ability to create and colonize the future of innovation.
+            Discover the revolutionary intersection where artificial intelligence, 3D printing, and innovation engines come together to build new worlds. Explore how innovation impacts our lives and be prepared for the new ideas that will emerge from this Big Bang. Take the opportunity to understand how these technologies are reshaping our ability to create and colonize the future of innovation.
           </p>
         </div>
       </section>
