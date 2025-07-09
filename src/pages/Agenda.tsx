@@ -202,31 +202,37 @@ const Agenda = () => {
                   className="bg-gradient-to-br from-white/5 to-white/10 border border-white/20 rounded-lg p-6 cursor-pointer transition-all duration-300 hover:scale-105 hover:border-ivove-fuchsia hover:shadow-lg hover:shadow-ivove-fuchsia/20 backdrop-blur-sm"
                   onClick={() => setSelectedSession(session)}
                 >
-                  <div className="flex items-center gap-2 mb-2">
-                    <Badge className={`${session.pillarColor} text-white text-xs`}>
-                      {session.pillar}
-                    </Badge>
-                    <Badge variant="outline" className="text-gray-300 border-gray-500 text-xs">
-                      {session.day}
-                    </Badge>
-                  </div>
-                  
-                  {/* Speaker image and title */}
-                  <div className="flex items-center gap-3 mb-3">
-                    <img 
-                      src={session.speakerImage} 
-                      alt={session.speaker}
-                      className="w-10 h-10 rounded-full border-2 border-ivove-fuchsia/50"
-                    />
-                    <h3 className="text-xl font-space font-semibold text-white hover:text-ivove-fuchsia transition-colors">
-                      {session.shortTitle}
-                    </h3>
-                  </div>
-                  
-                  <div className="space-y-1 text-sm text-gray-300">
-                    <p><span className="text-ivove-fuchsia">⏰</span> {session.time}</p>
-                    <p><span className="text-ivove-blue">📍</span> {session.location}</p>
-                    <p><span className="text-ivove-fuchsia">🎤</span> {session.speaker}</p>
+                  <div className="flex items-start gap-6">
+                    {/* Content section */}
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-3">
+                        <Badge className={`${session.pillarColor} text-white text-xs`}>
+                          {session.pillar}
+                        </Badge>
+                        <Badge variant="outline" className="text-gray-300 border-gray-500 text-xs">
+                          {session.day}
+                        </Badge>
+                      </div>
+                      
+                      <h3 className="text-xl font-space font-semibold text-white hover:text-ivove-fuchsia transition-colors mb-3">
+                        {session.shortTitle}
+                      </h3>
+                      
+                      <div className="space-y-1 text-sm text-gray-300">
+                        <p><span className="text-ivove-fuchsia">⏰</span> {session.time}</p>
+                        <p><span className="text-ivove-blue">📍</span> {session.location}</p>
+                        <p><span className="text-ivove-fuchsia">🎤</span> {session.speaker}</p>
+                      </div>
+                    </div>
+
+                    {/* Speaker image section */}
+                    <div className="flex-shrink-0">
+                      <img 
+                        src={session.speakerImage} 
+                        alt={session.speaker}
+                        className="w-20 h-20 object-cover rounded-lg border-2 border-ivove-fuchsia/50 shadow-lg"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
