@@ -14,7 +14,7 @@ const CountdownTimer = () => {
   const [isAnimatingOut, setIsAnimatingOut] = useState(false);
 
   useEffect(() => {
-    const targetDate = new Date('2025-07-20T00:00:00').getTime();
+    const targetDate = new Date('2025-07-16T00:00:00').getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -55,8 +55,8 @@ const CountdownTimer = () => {
           <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-ivove-fuchsia to-ivove-blue rounded-full flex items-center justify-center animate-pulse">
             <Clock className="w-10 h-10 text-white" />
           </div>
-          <h2 className="text-3xl md:text-4xl font-space font-bold mb-4 bg-gradient-to-r from-white via-ivove-fuchsia to-ivove-blue bg-clip-text text-transparent">
-            Lançamento em:
+          <h2 className="text-2xl md:text-3xl font-space font-bold mb-4 bg-gradient-to-r from-white via-ivove-fuchsia to-ivove-blue bg-clip-text text-transparent">
+            The biggest innovation event at GBC Curitiba is coming:
           </h2>
         </div>
 
@@ -108,7 +108,7 @@ const CountdownTimer = () => {
 
         <div className="mt-8">
           <p className="text-gray-300 text-lg font-inter">
-            A inovação está chegando...
+            IN01: Thank you for meeting me. I want to invite you on a journey of exploration.
           </p>
         </div>
       </div>
