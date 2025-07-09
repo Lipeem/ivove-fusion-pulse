@@ -23,8 +23,12 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo and brand section */}
           <div className="flex items-center space-x-2 sm:space-x-4 min-w-0 flex-shrink">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-ivove-fuchsia to-ivove-blue rounded-lg flex items-center justify-center flex-shrink-0">
-              <span className="text-white font-bold text-base sm:text-lg">I</span>
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-ivove-fuchsia to-ivove-blue rounded-lg flex items-center justify-center flex-shrink-0 p-1">
+              <img 
+                src="/lovable-uploads/afb1af96-2a9b-479d-b125-64c12023a2f0.png" 
+                alt="Innoverse Logo" 
+                className="w-full h-full object-contain"
+              />
             </div>
             <Link to="/" className="text-lg sm:text-2xl font-space font-bold text-white hover:text-ivove-fuchsia transition-colors truncate">
               Innoverse
