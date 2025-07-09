@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import BiomorphicShapes from '@/components/BiomorphicShapes';
@@ -104,15 +103,12 @@ const sessions: Session[] = [
 const Agenda = () => {
   const [selectedSession, setSelectedSession] = useState<Session | null>(null);
   const [filterPillar, setFilterPillar] = useState<string>('All');
-  const [filterDay, setFilterDay] = useState<string>('All');
 
   const pillars = ['All', 'Purposeful Innovation', 'Courage to Transform', 'Innovation and Career', 'Creative Resilience', 'Balance that Liberates'];
-  const days = ['All', 'Day 1 - August 7', 'Day 2 - August 14 (Morning)', 'Day 2 - August 14 (Afternoon)', 'Day 3 - August 19', 'Day 4 - August 21 (Morning)', 'Day 4 - August 21 (Afternoon)'];
 
   const filteredSessions = sessions.filter(session => {
     const pillarMatch = filterPillar === 'All' || session.pillar === filterPillar;
-    const dayMatch = filterDay === 'All' || session.day === filterDay;
-    return pillarMatch && dayMatch;
+    return pillarMatch;
   });
 
   return (
@@ -136,7 +132,7 @@ const Agenda = () => {
         </div>
 
         {/* Enhanced Filters with better visibility */}
-        <div className="mb-12 flex flex-wrap gap-4 justify-center relative z-10">
+        <div className="mb-12 flex justify-center relative z-10">
           <div className="bg-ivove-dark/60 backdrop-blur-sm rounded-xl p-4 border border-white/10">
             <div className="flex flex-wrap gap-2">
               <span className="text-sm text-white/90 self-center mr-2 font-medium">Filter by Pillar:</span>
@@ -151,25 +147,6 @@ const Agenda = () => {
                   }`}
                 >
                   {pillar}
-                </button>
-              ))}
-            </div>
-          </div>
-          
-          <div className="bg-ivove-dark/60 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-            <div className="flex flex-wrap gap-2">
-              <span className="text-sm text-white/90 self-center mr-2 font-medium">Filter by Day:</span>
-              {days.slice(0, 4).map(day => (
-                <button
-                  key={day}
-                  onClick={() => setFilterDay(day)}
-                  className={`px-3 py-1 rounded-full text-sm transition-all font-medium ${
-                    filterDay === day 
-                      ? 'bg-ivove-blue text-white shadow-lg' 
-                      : 'bg-white/15 text-white hover:bg-white/25'
-                  }`}
-                >
-                  {day.includes('Day') ? day.split(' - ')[0] : day}
                 </button>
               ))}
             </div>
